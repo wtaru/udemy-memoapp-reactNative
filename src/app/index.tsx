@@ -9,37 +9,35 @@ const Index = (): JSX.Element => {
                     <Text style={styles.header_right}>logout</Text>
                 </View>
             </View>
-            <View>
+            <View style={styles.memoListItem}>
                 <View>
-                    <View>
-                        <Text>買い物リスト</Text>
-                        <Text>2024年06月01日 10:00</Text>
-                    </View>
-                    <View>
-                        <Text>❌</Text>
-                    </View>
+                    <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+                    <Text style={styles.memoListItemDate}>2024年06月01日 10:00</Text>
                 </View>
                 <View>
-                    <View>
-                        <Text>買い物リスト</Text>
-                        <Text>2024年06月01日 10:00</Text>
-                    </View>
-                    <View>
-                        <Text>❌</Text>
-                    </View>
-                </View>
-                <View>
-                    <View>
-                        <Text>買い物リスト</Text>
-                        <Text>2024年06月01日 10:00</Text>
-                    </View>
-                    <View>
-                        <Text>❌</Text>
-                    </View>
+                    <Text>❌</Text>
                 </View>
             </View>
-            <View>
-                <Text>+</Text>
+            <View style={styles.memoListItem}>
+                <View>
+                    <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+                    <Text style={styles.memoListItemDate}>2024年06月01日 10:00</Text>
+                </View>
+                <View>
+                    <Text>❌</Text>
+                </View>
+            </View>
+            <View style={styles.memoListItem}>
+                <View>
+                    <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+                    <Text style={styles.memoListItemDate}>2024年06月01日 10:00</Text>
+                </View>
+                <View>
+                    <Text>❌</Text>
+                </View>
+            </View>
+            <View style={styles.circleButton}>
+                <Text style={styles.circleButtonLabel}>+</Text>
             </View>
         </View>
     )
@@ -69,6 +67,43 @@ const styles = StyleSheet.create({
         fontSize: 24,
         lineHeight: 32,
         color: "#ffffff"
+    },
+    memoListItem: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingVertical: 16,
+        paddingHorizontal: 19,
+        alignItems: "center",
+        borderBottomWidth: 1,
+        borderColor: "rgba(0,0,0,0.15)",
+    },
+    memoListItemTitle: {
+        fontSize: 16,
+        lineHeight: 32
+    },
+    memoListItemDate: {
+        fontSize: 12,
+        lineHeight: 16,
+        color: "#848484"
+    },
+    circleButton: {
+        height: 64,
+        width: 64,
+        backgroundColor: "#728EC3",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 32,
+        position: "absolute",
+        right: 40,
+        bottom: 40,
+        shadowColor: "#000000", 
+        shadowOpacity: 0.25,
+        elevation: 8
+    },
+    circleButtonLabel: {
+        fontSize: 40,
+        color: "#ffffff", 
+        lineHeight: 48,
     }
 })
 
